@@ -56,3 +56,17 @@ componentDidMount() {
     console.log('Button Clicked', this.state.search, e);
     this.searchEmployee(this.state.search);
   };
+  render() {
+    return (
+      <Wrapper>
+        <div className="container">
+          <div className="row">
+            <Col size="md-4">
+              <h2>Employee Directory</h2>
+              <SearchForm
+                value={this.state.search}
+                handleInputChange={this.handleInputChange}
+                handleFormSubmit={this.handleFormSubmit}
+              />
+            </Col>
+          </div>
